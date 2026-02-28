@@ -1,0 +1,103 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f0f0f;
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  background:linear-gradient(90deg,#8b0000,#000);
+}
+
+h1{
+  color:gold;
+}
+
+button{
+  cursor:pointer;
+  padding:10px;
+  border:none;
+  background:gold;
+  color:black;
+  font-weight:bold;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.categoria{
+  padding:10px 20px;
+  color:gold;
+}
+
+.cardapio{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:20px;
+}
+
+.item{
+  background:#1c1c1c;
+  padding:15px;
+  border-radius:12px;
+  width:220px;
+  text-align:center;
+  border:2px solid #8b0000;
+  transition:0.3s;
+  position:relative;
+}
+
+.item:hover{
+  box-shadow:0 0 15px gold;
+  transform:translateY(-5px);
+}
+
+.item img{
+  width:100%;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.item img:hover{
+  transform:scale(1.05);
+}
+
+.carrinho{
+  position:fixed;
+  right:-350px;
+  top:0;
+  width:340px;
+  height:100%;
+  background:#1a1a1a;
+  padding:20px;
+  transition:0.4s;
+  overflow:auto;
+}
+
+.carrinho.ativo{
+  right:0;
+}
+
+.finalizar{
+  width:100%;
+  margin-top:10px;
+  background:#8b0000;
+  color:white;
+}
+
+input{
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius:6px;
+  border:none;
+}
