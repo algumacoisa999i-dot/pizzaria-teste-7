@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzaria dos Goats</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Pizzaria dos Goats 🍕</h1>
+  <button onclick="toggleCarrinho()">🛒 <span id="contador">0</span></button>
+</header>
+
+<h2 class="categoria">🍕 Pizzas</h2>
+<section class="cardapio">
+  <div class="item" data-nome="Calabresa" data-preco="35">
+    <img src="img/calabresa.jpg">
+    <h3>Calabresa</h3>
+    <p>Molho, queijo e calabresa</p>
+    <span>R$ 35</span>
+    <button onclick="adicionar('Calabresa',35)">+</button>
+  </div>
+
+  <div class="item" data-nome="Mussarela" data-preco="32">
+    <img src="img/mussarela.jpg">
+    <h3>Mussarela</h3>
+    <p>Molho e muito queijo</p>
+    <span>R$ 32</span>
+    <button onclick="adicionar('Mussarela',32)">+</button>
+  </div>
+
+  <div class="item" data-nome="Frango com Catupiry" data-preco="38">
+    <img src="img/frango.jpg">
+    <h3>Frango com Catupiry</h3>
+    <p>Frango desfiado e catupiry</p>
+    <span>R$ 38</span>
+    <button onclick="adicionar('Frango com Catupiry',38)">+</button>
+  </div>
+
+  <div class="item" data-nome="Quatro Queijos" data-preco="40">
+    <img src="img/quatroqueijos.jpg">
+    <h3>Quatro Queijos</h3>
+    <p>Mussarela, gorgonzola, parmesão, catupiry</p>
+    <span>R$ 40</span>
+    <button onclick="adicionar('Quatro Queijos',40)">+</button>
+  </div>
+</section>
+
+<h2 class="categoria">🥤 Bebidas</h2>
+<section class="cardapio">
+  <div class="item" data-nome="Coca 2L" data-preco="12">
+    <img src="img/coca.jpg">
+    <h3>Coca-Cola 2L</h3>
+    <span>R$ 12</span>
+    <button onclick="adicionar('Coca 2L',12)">+</button>
+  </div>
+
+  <div class="item" data-nome="Guaraná 2L" data-preco="10">
+    <img src="img/guarana.jpg">
+    <h3>Guaraná 2L</h3>
+    <span>R$ 10</span>
+    <button onclick="adicionar('Guaraná 2L',10)">+</button>
+  </div>
+</section>
+
+<!-- Carrinho -->
+<div id="carrinho" class="carrinho">
+  <h2>Seu Pedido</h2>
+  <div id="lista"></div>
+
+  <p>Entrega: R$ <span id="entrega">5</span></p>
+  <h3>Total: R$ <span id="total">0</span></h3>
+
+  <input type="text" id="endereco" placeholder="Digite seu endereço">
+  <input type="text" id="cupom" placeholder="Cupom de desconto">
+  <button onclick="aplicarCupom()">Aplicar Cupom</button>
+  <button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
